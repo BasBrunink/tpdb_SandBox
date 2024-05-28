@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum OperationalStatus {
-  OPENED("Opened"),
+  OPEN("Open"),
   CLOSED("Closed"),
   TEMPORARILY_CLOSED("Temporarily closed"),
   SBNO("Standing but not operating"),
