@@ -1,12 +1,15 @@
 package org.tpdb.backend.monolith.backend.park;
 
+import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
+import org.tpdb.backend.monolith.backend.park.dto.ParkCreateDto;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@Log
 public class ParkService {
 
   private final ParkRepository parkRepository;
@@ -15,7 +18,17 @@ public class ParkService {
     this.parkRepository = parkRepository;
   }
 
-  public Park createPark(Park park) {
+  public Park createPark(ParkCreateDto parkDto) {
+    log.info("Creating Park: " + parkDto.getName());
+
+    Park park = Park.builder()
+        .name(parkDto.getName())
+        .parkType(parkDto.getParkType())
+        .company(parkDto.getCompany())
+        .openingDate(parkDto.getOpeningDate())
+        .closingDate(parkDto.getClosingDate())
+        .operationalStatus(parkDto.getOperationalStatus())
+        .build();
     return parkRepository.save(park);
   }
 

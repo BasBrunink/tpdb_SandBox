@@ -1,12 +1,16 @@
 package org.tpdb.backend.monolith.backend.park;
 
+import lombok.extern.java.Log;
 import org.springframework.web.bind.annotation.*;
+import org.tpdb.backend.monolith.backend.park.dto.ParkCreateDto;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@RestController("parks")
+@RestController()
+@RequestMapping("/park")
+@Log
 public class ParkController {
 
   private final ParkService parkService;
@@ -16,7 +20,8 @@ public class ParkController {
   }
 
   @PostMapping()
-  public Park createPark(Park park) {
+  public Park createPark(@RequestBody ParkCreateDto park) {
+    log.info("Creating Park: " + park.getName());
     return parkService.createPark(park);
   }
 
