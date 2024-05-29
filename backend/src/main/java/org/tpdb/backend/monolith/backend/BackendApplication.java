@@ -40,8 +40,12 @@ public class BackendApplication implements CommandLineRunner {
   @Override
   public void run(String... args) {
     List<Company> seededCompanies = seedCompanies();
-    List<Park> seededParks = seedParks(seededCompanies.stream().findFirst().get());
-    List<Resort> seededResorts = seedResorts(seededCompanies.stream().findFirst().get());
+    Company company = seededCompanies.stream().findFirst().isPresent() ? seededCompanies.stream().findFirst().get(): null;
+
+    List<Park> seededParks = seedParks(company);
+
+
+    List<Resort> seededResorts = seedResorts(company);
 
   }
 
