@@ -40,7 +40,7 @@ public class BackendApplication implements CommandLineRunner {
   @Override
   public void run(String... args) {
     List<Company> seededCompanies = seedCompanies();
-    Company company = seededCompanies.stream().findFirst().isPresent() ? seededCompanies.stream().findFirst().get(): null;
+    Company company = seededCompanies.stream().findFirst().orElse(null);
 
     List<Park> seededParks = seedParks(company);
 
