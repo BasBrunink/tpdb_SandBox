@@ -6,6 +6,7 @@ import lombok.Getter;
 public enum OperationalStatus {
   OPEN("Open"),
   CLOSED("Closed"),
+  OPERATIONAL("In Operation"),
   TEMPORARILY_CLOSED("Temporarily closed"),
   SBNO("Standing but not operating"),
   REFURBISHMENT("Under refurbishment"),
