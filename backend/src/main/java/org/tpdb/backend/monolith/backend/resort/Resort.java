@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 @Builder
 @Entity
 public class Resort extends BaseModel {
@@ -21,8 +22,7 @@ public class Resort extends BaseModel {
   private LocalDate closingDate;
   private OperationalStatus operationalStatus;
   //todo: Set Relations See Issue #12
-  //private List<Park> parks;
-
+//  private List<Park> parks;
 //  private List<Accomodation> accomodations;
 //  private List<Restaurant> restaurants;
 //  private List<Shop> shops;
