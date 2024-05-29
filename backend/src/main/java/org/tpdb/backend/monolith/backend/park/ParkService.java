@@ -22,10 +22,6 @@ public class ParkService {
   }
 
   public Park createPark(ParkCreateDto parkDto) {
-
-
-
-
     Park park = Park.builder()
         .name(parkDto.getName())
         .parkType(parkDto.getParkType())
