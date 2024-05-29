@@ -19,12 +19,13 @@ public class ParkService {
   }
 
   public Park createPark(ParkCreateDto parkDto) {
-    log.info("Creating Park: " + parkDto.getName());
+
 
     Park park = Park.builder()
         .name(parkDto.getName())
         .parkType(parkDto.getParkType())
-        .company(parkDto.getCompany())
+        .operator(parkDto.getOperator())
+        .owner(parkDto.getOwner())
         .openingDate(parkDto.getOpeningDate())
         .closingDate(parkDto.getClosingDate())
         .operationalStatus(parkDto.getOperationalStatus())

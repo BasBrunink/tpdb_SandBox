@@ -1,20 +1,21 @@
-package org.tpdb.backend.monolith.backend.park.dto;
+package org.tpdb.backend.monolith.backend.resort.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.tpdb.backend.monolith.backend.common.enums.OperationalStatus;
-import org.tpdb.backend.monolith.backend.park.ParkType;
 
 import java.time.LocalDate;
 
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ParkCreateDto {
+public class ResortCreateDto {
   private String name;
-  private ParkType parkType;
-  private String owner; //TODO: Set to Company when Company Entity is there
+  private String owner;//TODO: Set to Company when Company Entity is there
   private String operator; //TODO: Set to Company when Company Entity is there
   private LocalDate openingDate;
   private LocalDate closingDate;
   private OperationalStatus operationalStatus;
+
 }

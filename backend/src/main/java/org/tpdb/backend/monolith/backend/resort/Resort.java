@@ -1,5 +1,4 @@
-package org.tpdb.backend.monolith.backend.park;
-
+package org.tpdb.backend.monolith.backend.resort;
 
 import jakarta.persistence.Entity;
 import lombok.*;
@@ -14,24 +13,20 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Park extends BaseModel {
+public class Resort extends BaseModel {
   private String name;
-  private ParkType parkType;
-  //TODO: Set to Company when Company Entity is there
-  private String operator;
-  private String owner;
+  private String operator; //TODO: Set to Company when Company Entity is there
+  private String owner; //TODO: Set to Company when Company Entity is there
   private LocalDate openingDate;
   private LocalDate closingDate;
   private OperationalStatus operationalStatus;
-  //TODO: Set Relations See Issue #12
-//  private List<Ride> rides;
-//  private List<Attraction> attractions;
-//  private List<Show> shows;
+  //todo: Set Relations See Issue #12
+  //private List<Park> parks;
+
+//  private List<Accomodation> accomodations;
 //  private List<Restaurant> restaurants;
 //  private List<Shop> shops;
+//  private List<Show> shows;
+//  private List<Attraction> attractions;
 //
-
-
-
-
 }
