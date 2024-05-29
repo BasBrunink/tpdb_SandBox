@@ -13,7 +13,7 @@ import java.util.UUID;
 @Log
 public class ResortService {
   private final ResortRepository resortRepository;
-  private final static String SYSTEM = "System";
+  private static final String SYSTEM = "System";
 
   public ResortService(ResortRepository resortRepository) {
     this.resortRepository = resortRepository;

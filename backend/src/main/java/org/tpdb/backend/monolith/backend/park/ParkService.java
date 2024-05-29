@@ -15,7 +15,7 @@ public class ParkService {
 
   private final ParkRepository parkRepository;
 
-  private final static String SYSTEM = "System";
+  private static final String SYSTEM = "System";
 
   public ParkService(ParkRepository parkRepository) {
     this.parkRepository = parkRepository;

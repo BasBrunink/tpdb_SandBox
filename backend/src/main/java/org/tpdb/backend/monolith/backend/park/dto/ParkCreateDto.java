@@ -2,7 +2,6 @@ package org.tpdb.backend.monolith.backend.park.dto;
 
 import lombok.*;
 import org.tpdb.backend.monolith.backend.common.enums.OperationalStatus;
-import org.tpdb.backend.monolith.backend.company.Company;
 import org.tpdb.backend.monolith.backend.park.ParkType;
 
 import java.time.LocalDate;
