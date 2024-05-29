@@ -36,7 +36,7 @@ import java.time.LocalDate;
         @JsonSubTypes.Type(value = FlatRide.class, name = "FlatRide"),
         @JsonSubTypes.Type(value = DarkRide.class, name = "DarkRide"),
         @JsonSubTypes.Type(value = WaterRide.class, name = "WaterRide"),
-        @JsonSubTypes.Type(value = RollerCoaster.class, name = "RollerCoaster")
+//        @JsonSubTypes.Type(value = RollerCoaster.class, name = "RollerCoaster")
 
 
 })

@@ -13,8 +13,7 @@ import org.tpdb.backend.monolith.backend.common.models.BaseModel;
 public class FlatRideType extends BaseModel {
   private String name;
   private String description;
-  private String thrillFactor;
-  private String nauseaFactor;
+
 
 
 
