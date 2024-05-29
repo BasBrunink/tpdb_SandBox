@@ -1,5 +1,6 @@
-package org.tpdb.backend.monolith.backend.ride;
+package org.tpdb.backend.monolith.backend.ride.models;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.*;
 
@@ -9,10 +10,9 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @Entity
-public class RollerCoaster extends Ride{
+@DiscriminatorValue("TrackedRide")
+public class TrackedRide extends Ride{
   private int length;
   private int height;
-  private int numInversions;
-  private int maxSpeed;
   private int numDrops;
 }
