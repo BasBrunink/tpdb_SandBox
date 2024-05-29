@@ -12,6 +12,10 @@ import org.tpdb.backend.monolith.backend.park.ParkService;
 import org.tpdb.backend.monolith.backend.park.ParkType;
 import org.tpdb.backend.monolith.backend.resort.Resort;
 import org.tpdb.backend.monolith.backend.resort.ResortService;
+import org.tpdb.backend.monolith.backend.ride.DarkRide;
+import org.tpdb.backend.monolith.backend.ride.Ride;
+import org.tpdb.backend.monolith.backend.ride.RideService;
+import org.tpdb.backend.monolith.backend.ride.RollerCoaster;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -25,29 +29,50 @@ public class BackendApplication implements CommandLineRunner {
   private final ParkService parkService;
   private final ResortService resortService;
   private final CompanyService companyService;
+  private final RideService rideService;
 
-  public BackendApplication(ParkService parkService, ResortService resortService, CompanyService companyService) {
+  public BackendApplication(ParkService parkService, ResortService resortService, CompanyService companyService, RideService rideService) {
     this.parkService = parkService;
     this.resortService = resortService;
     this.companyService = companyService;
+    this.rideService = rideService;
   }
 
   public static void main(String[] args) {
     SpringApplication.run(BackendApplication.class, args);
   }
 
-  String mackFamily = "Mack Family";
   @Override
   public void run(String... args) {
     List<Company> seededCompanies = seedCompanies();
     Company company = seededCompanies.stream().findFirst().orElse(null);
 
     List<Park> seededParks = seedParks(company);
-
-
     List<Resort> seededResorts = seedResorts(company);
 
+    seedRides();
+
   }
+
+  private void seedRides() {
+    DarkRide darkRide = DarkRide.builder()
+        .length(1000)
+        .theme("Pirates")
+        .darkRideType(null)
+        .build();
+    darkRide.setName("Pirates of the Caribbean");
+    rideService.createDarkRide(darkRide);
+    RollerCoaster rollerCoaster = RollerCoaster.builder()
+        .length(1000)
+        .height(50)
+        .numInversions(3)
+        .maxSpeed(100)
+        .numDrops(1)
+        .build();
+    rollerCoaster.setName("Silver Star");
+    rideService.createRollerCoaster(rollerCoaster);
+  }
+
 
 
   private List<Company> seedCompanies() {
