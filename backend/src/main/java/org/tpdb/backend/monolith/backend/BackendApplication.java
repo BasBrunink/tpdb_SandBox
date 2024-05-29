@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.tpdb.backend.monolith.backend.common.enums.OperationalStatus;
+import org.tpdb.backend.monolith.backend.company.Company;
+import org.tpdb.backend.monolith.backend.company.CompanyService;
 import org.tpdb.backend.monolith.backend.park.Park;
 import org.tpdb.backend.monolith.backend.park.ParkService;
 import org.tpdb.backend.monolith.backend.park.ParkType;
@@ -22,10 +24,12 @@ public class BackendApplication implements CommandLineRunner {
 
   private final ParkService parkService;
   private final ResortService resortService;
+  private final CompanyService companyService;
 
-  public BackendApplication(ParkService parkService, ResortService resortService) {
+  public BackendApplication(ParkService parkService, ResortService resortService, CompanyService companyService) {
     this.parkService = parkService;
     this.resortService = resortService;
+    this.companyService = companyService;
   }
 
   public static void main(String[] args) {
@@ -35,27 +39,39 @@ public class BackendApplication implements CommandLineRunner {
   String mackFamily = "Mack Family";
   @Override
   public void run(String... args) {
-    List<Park> seededParks = seedParks();
-    List<Resort> seededResorts = seedResorts();
+    List<Company> seededCompanies = seedCompanies();
+    List<Park> seededParks = seedParks(seededCompanies.stream().findFirst().get());
+    List<Resort> seededResorts = seedResorts(seededCompanies.stream().findFirst().get());
 
   }
 
-  private List<Resort> seedResorts() {
+
+  private List<Company> seedCompanies() {
+    List<Company> companies= Arrays.asList(
+        Company.builder().name("Europa-Park").build()
+    );
+    return companyService.insertManyCompanies(companies);
+  }
+
+  private List<Resort> seedResorts(Company company) {
     List<Resort> resorts = Arrays.asList(
         Resort.builder()
             .name("Europa Park Resort")
             .openingDate(LocalDate.of(1975, 7, 12))
+            .owner(company)
+            .operator(company)
             .closingDate(null)
             .operationalStatus(OperationalStatus.OPEN)
             .build()
     );
     return resortService.insertManyResorts(resorts);
   }
-  private List<Park> seedParks() {
+  private List<Park> seedParks(Company company) {
     List<Park> parks = Arrays.asList(
         Park.builder()
             .name("Europa Park")
-
+            .owner(company)
+            .operator(company)
             .openingDate(LocalDate.of(1975, 7, 12))
             .closingDate(null)
             .operationalStatus(OperationalStatus.OPEN)
