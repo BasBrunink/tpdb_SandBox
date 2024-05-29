@@ -44,8 +44,6 @@ public class BackendApplication implements CommandLineRunner {
     List<Resort> resorts = Arrays.asList(
         Resort.builder()
             .name("Europa Park Resort")
-            .owner(mackFamily)
-            .operator(mackFamily)
             .openingDate(LocalDate.of(1975, 7, 12))
             .closingDate(null)
             .operationalStatus(OperationalStatus.OPEN)
@@ -57,8 +55,7 @@ public class BackendApplication implements CommandLineRunner {
     List<Park> parks = Arrays.asList(
         Park.builder()
             .name("Europa Park")
-            .owner(mackFamily)
-            .operator(mackFamily)
+
             .openingDate(LocalDate.of(1975, 7, 12))
             .closingDate(null)
             .operationalStatus(OperationalStatus.OPEN)
@@ -66,8 +63,6 @@ public class BackendApplication implements CommandLineRunner {
             .build(),
         Park.builder()
             .name("Rulantica")
-            .owner(mackFamily)
-            .operator(mackFamily)
             .openingDate(LocalDate.of(2019, 7, 12))
             .closingDate(null)
             .operationalStatus(OperationalStatus.OPEN)

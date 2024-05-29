@@ -25,8 +25,6 @@ public class ParkService {
     Park park = Park.builder()
         .name(parkDto.getName())
         .parkType(parkDto.getParkType())
-        .operator(parkDto.getOperator())
-        .owner(parkDto.getOwner())
         .openingDate(parkDto.getOpeningDate())
         .closingDate(parkDto.getClosingDate())
         .operationalStatus(parkDto.getOperationalStatus())
