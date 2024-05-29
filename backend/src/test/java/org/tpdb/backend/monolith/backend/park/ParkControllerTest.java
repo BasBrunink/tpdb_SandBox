@@ -21,7 +21,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-public class ParkControllerTest {
+class ParkControllerTest {
 
     @Mock
     private ParkService parkService;
@@ -72,6 +72,7 @@ public class ParkControllerTest {
 
     @Test
     @DisplayName("Should return not found when park id does not exist")
+    //TODO: Not working as expected
     void getParkNotFound() throws Exception {
         UUID parkId = UUID.randomUUID();
         when(parkService.getPark(parkId)).thenReturn(Optional.empty());
