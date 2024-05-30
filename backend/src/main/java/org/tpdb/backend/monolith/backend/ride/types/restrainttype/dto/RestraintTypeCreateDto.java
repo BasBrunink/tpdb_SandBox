@@ -7,4 +7,6 @@ import lombok.Getter;
 @AllArgsConstructor
 
 public class RestraintTypeCreateDto {
+  private String name;
+  private String description;
 }
