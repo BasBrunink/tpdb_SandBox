@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.types.flatRideType;
+package org.tpdb.backend.monolith.backend.ride.types.flatridetype;
 
 import jakarta.persistence.Entity;
 import lombok.*;

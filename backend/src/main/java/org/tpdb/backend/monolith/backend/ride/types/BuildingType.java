@@ -14,10 +14,4 @@ import org.tpdb.backend.monolith.backend.common.models.BaseModel;
 public class BuildingType extends BaseModel {
     private String name;
     private String description;
-
-//    INDOOR("Indoor"),
-//    OUTDOOR("Outdoor"),
-//    PARTIALLY_COVERED("Partially Covered"),
-//    UNKNOWN("Unknown");
-
 }

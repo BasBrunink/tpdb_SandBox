@@ -7,7 +7,7 @@ import jakarta.persistence.OneToOne;
 import lombok.*;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.ElementsOnRollerCoaster;
 import org.tpdb.backend.monolith.backend.ride.types.*;
-import org.tpdb.backend.monolith.backend.ride.types.rollerCoasterType.RollerCoasterType;
+import org.tpdb.backend.monolith.backend.ride.types.rollercoastertype.RollerCoasterType;
 
 import java.util.List;
 

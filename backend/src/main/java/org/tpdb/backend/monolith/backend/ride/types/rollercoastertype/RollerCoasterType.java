@@ -1,8 +1,7 @@
-package org.tpdb.backend.monolith.backend.ride.types.rollerCoasterType;
+package org.tpdb.backend.monolith.backend.ride.types.rollercoastertype;
 
 import jakarta.persistence.Entity;
 import lombok.*;
-import org.aspectj.apache.bcel.classfile.Unknown;
 import org.tpdb.backend.monolith.backend.common.models.BaseModel;
 
 @Getter

@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.types.rollerCoasterType;
+package org.tpdb.backend.monolith.backend.ride.types.rollercoastertype;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

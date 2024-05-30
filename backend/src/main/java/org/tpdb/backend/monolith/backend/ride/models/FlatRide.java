@@ -5,7 +5,7 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 import lombok.*;
-import org.tpdb.backend.monolith.backend.ride.types.flatRideType.FlatRideType;
+import org.tpdb.backend.monolith.backend.ride.types.flatridetype.FlatRideType;
 
 @Getter
 @Setter
