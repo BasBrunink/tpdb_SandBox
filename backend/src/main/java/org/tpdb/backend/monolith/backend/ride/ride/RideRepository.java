@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride;
+package org.tpdb.backend.monolith.backend.ride.ride;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
