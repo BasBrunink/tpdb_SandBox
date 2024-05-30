@@ -1,16 +1,26 @@
 package org.tpdb.backend.monolith.backend.ride.types;
 
-public enum WaterRideType {
+import jakarta.persistence.Entity;
+import lombok.*;
+import org.tpdb.backend.monolith.backend.common.models.BaseModel;
 
-  LOGFLUME("Log Flume"),
-  RAPIDS("Rapids"),
-  SHOOT_THE_CHUTE("Shoot the Chute"),
-  SPIRAL_SLIDE("Spiral Slide"),
-  WATER_SLIDE("Water Slide");
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+public class WaterRideType extends BaseModel {
 
-  WaterRideType(String fullName) {
-    this.fullName = fullName;
-  }
 
-  private final String fullName;
+  private String name;
+  private String description;
+
+
+//  LOGFLUME("Log Flume"),
+//  RAPIDS("Rapids"),
+//  SHOOT_THE_CHUTE("Shoot the Chute"),
+//  SPIRAL_SLIDE("Spiral Slide"),
+//  WATER_SLIDE("Water Slide");
+
 }

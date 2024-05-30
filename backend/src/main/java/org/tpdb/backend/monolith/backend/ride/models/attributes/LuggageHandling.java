@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.types;
+package org.tpdb.backend.monolith.backend.ride.models.attributes;
 
 public enum LuggageHandling {
     LOCK_BOX("Lock Box"),

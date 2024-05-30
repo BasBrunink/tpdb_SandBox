@@ -1,14 +1,26 @@
 package org.tpdb.backend.monolith.backend.ride.types;
 
 import com.fasterxml.jackson.databind.KeyDeserializer;
+import jakarta.persistence.Entity;
+import lombok.*;
+import org.tpdb.backend.monolith.backend.common.models.BaseModel;
 
-public enum RestraintType {
-  LAP_BAR("Lap Bar"),
-  NONE("None");
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+public class RestraintType extends BaseModel {
 
-  RestraintType(String fullName) {
-    this.fullName = fullName;
-  }
+  private String name;
+  private String description;
 
-  private final String fullName;
+
+
+
+//  LAP_BAR("Lap Bar"),
+//  NONE("None");
+
+
 }

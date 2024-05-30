@@ -32,6 +32,7 @@ public class RollerCoaster extends Ride {
     private int seatsPerRow;
     private int personsPerTrain;
     private boolean bigBoySeats;
+    @OneToOne
     private RestraintType restraintType;
     private boolean HydraulicRestraint;
     @OneToMany(mappedBy = "coaster")

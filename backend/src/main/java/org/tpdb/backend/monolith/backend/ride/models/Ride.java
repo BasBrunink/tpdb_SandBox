@@ -17,7 +17,7 @@ import org.tpdb.backend.monolith.backend.ride.models.attributes.RideFacilities;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.RideRestrictions;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.RideReviews;
 import org.tpdb.backend.monolith.backend.ride.types.BuildingType;
-import org.tpdb.backend.monolith.backend.ride.types.LuggageHandling;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.LuggageHandling;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -67,6 +67,7 @@ public abstract class Ride extends BaseModel {
     private LocalDate closingDate;
     private OperationalStatus operationalStatus;
     private LuggageHandling luggageHandling;
+    @OneToOne
     private BuildingType buildingType;
     private int capacity;
     private int duration;

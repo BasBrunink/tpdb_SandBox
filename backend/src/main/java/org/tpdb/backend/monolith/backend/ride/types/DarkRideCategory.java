@@ -1,14 +1,20 @@
 package org.tpdb.backend.monolith.backend.ride.types;
 
-public enum DarkRideCategory {
+import jakarta.persistence.Entity;
+import lombok.*;
+import org.tpdb.backend.monolith.backend.common.models.BaseModel;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Builder
+public class DarkRideCategory extends BaseModel {
+  private String name;
+  private String description;
 
 
-  DARKRIDE("Dark Ride"),
-  SHOW_RIDE("Show Ride"),
-  SEMI_DARKRIDE("Semi Dark Ride");
-  DarkRideCategory(String fullName) {
-    this.fullName = fullName;
-  }
 
-  private final String fullName;
+
 }
