@@ -3,7 +3,9 @@ package org.tpdb.backend.monolith.backend.ride;
 import org.springframework.stereotype.Service;
 import org.tpdb.backend.monolith.backend.ride.models.DarkRide;
 import org.tpdb.backend.monolith.backend.ride.models.Ride;
+import org.tpdb.backend.monolith.backend.ride.models.RollerCoaster;
 import org.tpdb.backend.monolith.backend.ride.models.TrackedRide;
+import org.tpdb.backend.monolith.backend.ride.types.rollercoastertype.dto.RollerCoasterCreateDto;
 
 import java.util.List;
 
@@ -21,16 +23,6 @@ public class RideService {
   public Ride createRide(Ride ride) {
     return rideRepository.save(ride);
   }
-  public Ride updateRide(Ride ride) {
-    return rideRepository.save(ride);
-  }
-  public DarkRide createDarkRide(DarkRide darkRide) {
-    return rideRepository.save(darkRide);
-  }
-  public TrackedRide createRollerCoaster(TrackedRide rollerCoaster) {
-    return rideRepository.save(rollerCoaster);
-  }
-
   public List<Ride> getRides() {
     return rideRepository.findAll();
   }

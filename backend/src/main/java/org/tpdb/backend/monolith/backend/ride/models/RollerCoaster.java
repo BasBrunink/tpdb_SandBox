@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.*;
-import org.tpdb.backend.monolith.backend.ride.models.attributes.ElementsOnRollerCoaster;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.elementsonrollercoaster.ElementsOnRollerCoaster;
 import org.tpdb.backend.monolith.backend.ride.types.restrainttype.RestraintType;
 import org.tpdb.backend.monolith.backend.ride.types.rollercoastertype.RollerCoasterType;
 

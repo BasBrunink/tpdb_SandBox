@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.models.attributes;
+package org.tpdb.backend.monolith.backend.ride.models.attributes.ridereviews;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;

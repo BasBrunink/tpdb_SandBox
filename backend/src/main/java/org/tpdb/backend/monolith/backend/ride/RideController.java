@@ -2,6 +2,8 @@ package org.tpdb.backend.monolith.backend.ride;
 
 import org.springframework.web.bind.annotation.*;
 import org.tpdb.backend.monolith.backend.ride.models.Ride;
+import org.tpdb.backend.monolith.backend.ride.models.TrackedRide;
+import org.tpdb.backend.monolith.backend.ride.types.rollercoastertype.dto.RollerCoasterCreateDto;
 
 import java.util.List;
 

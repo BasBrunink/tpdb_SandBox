@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.models.attributes;
+package org.tpdb.backend.monolith.backend.ride.models.attributes.ridefacilities;
 
 import jakarta.persistence.Entity;
 import lombok.*;

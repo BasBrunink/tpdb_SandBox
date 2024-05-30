@@ -25,13 +25,8 @@ class DarkRideCategoryServiceTests {
   @Test
   @DisplayName("Test convertCreateDtoToDarkRideCategory")
   void testConvertCreateDtoToDarkRideCategory() {
-
     DarkRideCategoryCreateDto dto = new DarkRideCategoryCreateDto("name", "description");
-
-
     DarkRideCategory actual = darkRideCategoryService.convertCreateDtoToDarkRideCategory(dto);
-
-
     assertEquals("name", actual.getName());
     assertEquals("description", actual.getDescription());
   }

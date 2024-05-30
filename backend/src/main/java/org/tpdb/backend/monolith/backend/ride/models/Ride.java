@@ -8,13 +8,14 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.tpdb.backend.monolith.backend.common.enums.OperationalStatus;
 import org.tpdb.backend.monolith.backend.common.models.BaseModel;
-import org.tpdb.backend.monolith.backend.company.Company;
+import org.tpdb.backend.monolith.backend.common.models.InvolvedCompanies;
+import org.tpdb.backend.monolith.backend.common.models.Location;
 import org.tpdb.backend.monolith.backend.park.Park;
-import org.tpdb.backend.monolith.backend.ride.models.attributes.RideFacilities;
-import org.tpdb.backend.monolith.backend.ride.models.attributes.RideRestrictions;
-import org.tpdb.backend.monolith.backend.ride.models.attributes.RideReviews;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.luggagehandling.LuggageHandling;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.ridefacilities.RideFacilities;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.riderestrictions.RideRestrictions;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.ridereviews.RideReviews;
 import org.tpdb.backend.monolith.backend.ride.types.buildingtype.BuildingType;
-import org.tpdb.backend.monolith.backend.ride.models.attributes.LuggageHandling;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -26,7 +27,6 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "type")
-@Builder
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
@@ -50,16 +50,16 @@ public abstract class Ride extends BaseModel {
     @ManyToOne
     @JsonBackReference
     Park park;
+    @OneToOne
+    Location location;
     @OneToMany(mappedBy = "ride")
     private List<RideReviews> reviews;
+    @OneToOne
+    private InvolvedCompanies involvedCompanies;
     @OneToOne
     private RideRestrictions restrictions;
     @OneToOne
     private RideFacilities facilities;
-    @ManyToOne
-    private Company manufacturer;
-    @ManyToOne
-    private Company design;
     private LocalDate openingDate;
     private LocalDate closingDate;
     private OperationalStatus operationalStatus;
