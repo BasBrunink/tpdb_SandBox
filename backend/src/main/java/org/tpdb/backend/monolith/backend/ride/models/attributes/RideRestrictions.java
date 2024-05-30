@@ -17,4 +17,5 @@ public class RideRestrictions  extends BaseModel {
   private int minHeightSolo;
   private int minAge;
   private int minHeight;
+  //TODO: add disability restrictions
 }

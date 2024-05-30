@@ -59,19 +59,16 @@ public abstract class Ride extends BaseModel {
     private RideRestrictions restrictions;
     @OneToOne
     private RideFacilities facilities;
-    @OneToOne
+    @ManyToOne
     private Company manufacturer;
-    @OneToOne
+    @ManyToOne
     private Company design;
     private LocalDate openingDate;
     private LocalDate closingDate;
     private OperationalStatus operationalStatus;
+    private LuggageHandling luggageHandling;
+    private BuildingType buildingType;
     private int capacity;
     private int duration;
-    private boolean preShow;
 
-    private BuildingType buildingType;
-    private boolean virtualReality;
-
-    private LuggageHandling luggageHandling;
 }

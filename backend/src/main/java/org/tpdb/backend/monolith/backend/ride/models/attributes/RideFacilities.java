@@ -18,4 +18,5 @@ public class RideFacilities extends BaseModel {
   private boolean onRideVideo;
   private boolean testSeats;
   private boolean babySwitch;
+  private boolean virtualReality; //TODO: IS a Virtual reality ride as an option a ride on itself?
 }
