@@ -3,13 +3,12 @@ package org.tpdb.backend.monolith.backend.ride.models;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.*;
-import org.tpdb.backend.monolith.backend.common.enums.OperationalStatus;
-import org.tpdb.backend.monolith.backend.company.Company;
-import org.tpdb.backend.monolith.backend.park.Park;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.ElementsOnRollerCoaster;
 import org.tpdb.backend.monolith.backend.ride.types.*;
+import org.tpdb.backend.monolith.backend.ride.types.rollerCoasterType.RollerCoasterType;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Getter
@@ -20,6 +19,7 @@ import java.util.List;
 @Entity
 @DiscriminatorValue("RollerCoaster")
 public class RollerCoaster extends Ride {
+    @OneToOne
     private RollerCoasterType rollerCoasterType;
     private int length;
     private int numberOfInversions;

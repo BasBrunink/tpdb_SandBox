@@ -1,15 +1,14 @@
-package org.tpdb.backend.monolith.backend.ride.models;
+package org.tpdb.backend.monolith.backend.ride.models.attributes;
 
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.tpdb.backend.monolith.backend.common.models.BaseModel;
+import org.tpdb.backend.monolith.backend.ride.models.RollerCoaster;
 
 
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor

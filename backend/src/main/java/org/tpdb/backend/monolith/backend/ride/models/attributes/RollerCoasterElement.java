@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.models;
+package org.tpdb.backend.monolith.backend.ride.models.attributes;
 
 
 import jakarta.persistence.Entity;
