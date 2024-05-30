@@ -71,5 +71,6 @@ public abstract class Ride extends BaseModel {
     private BuildingType buildingType;
     private int capacity;
     private int duration;
+    private String theme;
 
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 import lombok.*;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.Vehicle;
 import org.tpdb.backend.monolith.backend.ride.types.transportRideType.TransportRideType;
 
 @Getter
@@ -16,4 +17,6 @@ import org.tpdb.backend.monolith.backend.ride.types.transportRideType.TransportR
 public class TransportRides extends Ride{
   @OneToOne
   private TransportRideType transportRideType;
+  @OneToOne
+  Vehicle vehicle;
 }

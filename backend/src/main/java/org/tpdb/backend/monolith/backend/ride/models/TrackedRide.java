@@ -2,7 +2,10 @@ package org.tpdb.backend.monolith.backend.ride.models;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
 import lombok.*;
+import org.tpdb.backend.monolith.backend.ride.types.TrackedRideType;
+import org.tpdb.backend.monolith.backend.ride.models.attributes.Vehicle;
 
 @Getter
 @Setter
@@ -12,7 +15,11 @@ import lombok.*;
 @Entity
 @DiscriminatorValue("TrackedRide")
 public class TrackedRide extends Ride{
+  @OneToOne
+  private TrackedRideType trackedRideType;
+  @OneToOne
+  Vehicle vehicle;
   private int length;
-  private int height;
-  private int numDrops;
+
+
 }
