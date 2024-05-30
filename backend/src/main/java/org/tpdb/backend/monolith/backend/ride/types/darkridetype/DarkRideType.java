@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.types;
+package org.tpdb.backend.monolith.backend.ride.types.darkridetype;
 
 
 import jakarta.persistence.Entity;

@@ -1,6 +1,7 @@
 package org.tpdb.backend.monolith.backend.ride.types.flatridetype;
 
 import org.springframework.stereotype.Service;
+import org.tpdb.backend.monolith.backend.ride.types.flatridetype.dto.FlatRideTypeCreateDto;
 
 import java.util.List;
 
@@ -15,5 +16,13 @@ public class FlatRideTypeService {
 
   public void insertManyFlatRideTypes(List<FlatRideType> types) {
     flatRideTypeRepository.saveAll(types);
+  }
+
+
+  public FlatRideType convertCreateDtoToFlatRideType(FlatRideTypeCreateDto dto) {
+    return FlatRideType.builder()
+            .name(dto.getName())
+            .description(dto.getDescription())
+            .build();
   }
 }

@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.types;
+package org.tpdb.backend.monolith.backend.ride.types.restrainttype;
 
 import jakarta.persistence.Entity;
 import lombok.*;

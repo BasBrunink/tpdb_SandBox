@@ -11,5 +11,6 @@ import org.tpdb.backend.monolith.backend.common.models.BaseModel;
 @Builder
 @Entity
 public class RollerCoasterType extends BaseModel {
-  private int placeholder;
+  private String name;
+  private String description;
 }

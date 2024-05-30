@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 import lombok.*;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.Vehicle;
-import org.tpdb.backend.monolith.backend.ride.types.WaterRideType;
+import org.tpdb.backend.monolith.backend.ride.types.waterridetype.WaterRideType;
 
 @Getter
 @Setter

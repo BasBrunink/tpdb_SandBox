@@ -14,6 +14,7 @@ import org.tpdb.backend.monolith.backend.ride.models.Ride;
 import java.time.LocalDate;
 import java.util.List;
 
+
 @Getter
 @Setter
 @AllArgsConstructor

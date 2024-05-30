@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.tpdb.backend.monolith.backend.company.Company;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.DarkRideScene;
-import org.tpdb.backend.monolith.backend.ride.types.DarkRideCategory;
-import org.tpdb.backend.monolith.backend.ride.types.DarkRideType;
+import org.tpdb.backend.monolith.backend.ride.types.darkridecategory.DarkRideCategory;
+import org.tpdb.backend.monolith.backend.ride.types.darkridetype.DarkRideType;
 
 import java.util.List;
 

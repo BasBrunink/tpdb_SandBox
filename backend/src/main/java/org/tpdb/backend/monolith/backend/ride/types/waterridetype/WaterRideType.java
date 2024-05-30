@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.types;
+package org.tpdb.backend.monolith.backend.ride.types.waterridetype;
 
 import jakarta.persistence.Entity;
 import lombok.*;
@@ -10,7 +10,7 @@ import org.tpdb.backend.monolith.backend.common.models.BaseModel;
 @NoArgsConstructor
 @Builder
 @Entity
-public class TrackedRideType extends BaseModel {
+public class WaterRideType extends BaseModel {
   private String name;
   private String description;
 }

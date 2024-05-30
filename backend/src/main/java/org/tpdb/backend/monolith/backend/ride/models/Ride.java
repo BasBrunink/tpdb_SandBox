@@ -16,7 +16,7 @@ import org.tpdb.backend.monolith.backend.park.Park;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.RideFacilities;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.RideRestrictions;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.RideReviews;
-import org.tpdb.backend.monolith.backend.ride.types.BuildingType;
+import org.tpdb.backend.monolith.backend.ride.types.buildingtype.BuildingType;
 import org.tpdb.backend.monolith.backend.ride.models.attributes.LuggageHandling;
 
 import java.time.LocalDate;
