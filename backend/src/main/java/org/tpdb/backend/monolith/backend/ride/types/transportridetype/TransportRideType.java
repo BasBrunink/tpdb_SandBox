@@ -1,4 +1,4 @@
-package org.tpdb.backend.monolith.backend.ride.types.transportRideType;
+package org.tpdb.backend.monolith.backend.ride.types.transportridetype;
 
 import jakarta.persistence.Entity;
 import lombok.*;
