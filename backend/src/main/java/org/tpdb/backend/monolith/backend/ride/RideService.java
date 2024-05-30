@@ -39,7 +39,4 @@ public class RideService {
     return rideRepository.findByType(type);
   }
 
-  public void insertManyFlatRideTypes(List<Ride> types) {
-    rideRepository.saveAll(types);
-  }
 }

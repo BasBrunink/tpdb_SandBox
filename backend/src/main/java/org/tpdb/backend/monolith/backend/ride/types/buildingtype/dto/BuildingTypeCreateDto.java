@@ -6,4 +6,6 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class BuildingTypeCreateDto {
+  private String name;
+  private String description;
 }

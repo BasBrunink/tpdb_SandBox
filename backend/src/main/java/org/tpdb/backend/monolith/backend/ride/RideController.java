@@ -1,9 +1,6 @@
 package org.tpdb.backend.monolith.backend.ride;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.tpdb.backend.monolith.backend.ride.models.Ride;
 
 import java.util.List;
@@ -20,6 +17,9 @@ public class RideController {
 
 
   //TODO: Create POSTS for different types of rides
+
+
+
 
   @GetMapping()
   public List<Ride> getRides() {

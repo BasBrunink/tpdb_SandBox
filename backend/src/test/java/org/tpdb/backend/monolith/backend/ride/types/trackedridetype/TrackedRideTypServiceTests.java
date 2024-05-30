@@ -15,7 +15,7 @@ class TrackedRideTypServiceTests {
   private TrackedRideTypeService trackedRideTypeService;
 
   @BeforeEach
-  public void setUp() {
+   void setUp() {
     MockitoAnnotations.openMocks(this);
   }
 
