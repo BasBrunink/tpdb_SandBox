@@ -1,3 +1,3 @@
 # tpdb_SandBox
 
-https://sonarcloud.io/projects with github account
+https://sonarcloud.io/projects with GitHub account
